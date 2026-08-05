@@ -5,6 +5,7 @@ import LatestJobs from "../components/LatestJobs";
 import Companies from "../components/Companies";
 import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
 
 function Home() {
   return (
