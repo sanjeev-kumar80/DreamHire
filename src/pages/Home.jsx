@@ -6,6 +6,8 @@ import Companies from "../components/Companies";
 import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
+import Newsletter from "../components/Newsletter";
+
 
 function Home() {
   return (
@@ -16,6 +18,10 @@ function Home() {
       <LatestJobs />
       <Companies />
       <Testimonials />
+      <FAQ />
+      <Newsletter />
+
+
       <Stats />
     </>
   );
