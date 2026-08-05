@@ -1,30 +1,48 @@
+import {
+  FaBriefcase,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaCalendarAlt,
+  FaTrophy,
+  FaBuilding,
+} from "react-icons/fa";
+
 const categories = [
-  { icon: "💼", title: "Jobs" },
-  { icon: "🎓", title: "Internships" },
-  { icon: "🏆", title: "Hackathons" },
-  { icon: "📚", title: "Courses" },
-  { icon: "📅", title: "Events" },
-  { icon: "💻", title: "Remote" },
+  { icon: <FaBriefcase />, title: "Jobs" },
+  { icon: <FaGraduationCap />, title: "Internships" },
+  { icon: <FaLaptopCode />, title: "Courses" },
+  { icon: <FaCalendarAlt />, title: "Events" },
+  { icon: <FaTrophy />, title: "Hackathons" },
+  { icon: <FaBuilding />, title: "Companies" },
 ];
 
 function Categories() {
   return (
-    <section className="max-w-7xl mx-auto py-16 px-6">
-      <h2 className="text-4xl font-bold text-center mb-10">
-        Explore Categories
-      </h2>
+    <section className="bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {categories.map((item) => (
-          <div
-            key={item.title}
-            className="bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 p-6 text-center cursor-pointer"
-          >
-            <div className="text-5xl">{item.icon}</div>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Explore Categories
+        </h2>
 
-            <h3 className="font-semibold mt-4">{item.title}</h3>
-          </div>
-        ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+          {categories.map((item) => (
+            <div
+              key={item.title}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 p-8 text-center cursor-pointer"
+            >
+              <div className="text-5xl text-blue-600 flex justify-center">
+                {item.icon}
+              </div>
+
+              <h3 className="mt-5 font-semibold text-lg">
+                {item.title}
+              </h3>
+            </div>
+          ))}
+
+        </div>
       </div>
     </section>
   );
