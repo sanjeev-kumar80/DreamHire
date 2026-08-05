@@ -4,6 +4,7 @@ import FeaturedInternships from "../components/FeaturedInternships";
 import LatestJobs from "../components/LatestJobs";
 import Companies from "../components/Companies";
 import Stats from "../components/Stats";
+import Testimonials from "../components/Testimonials";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <FeaturedInternships />
       <LatestJobs />
       <Companies />
+      <Testimonials />
       <Stats />
     </>
   );
