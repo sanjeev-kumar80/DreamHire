@@ -1,51 +1,52 @@
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "15px 40px",
-        background: "#0f172a",
-        color: "white",
-      }}
-    >
-      <h2>DreamHire</h2>
+    <nav className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
-      <ul
-        style={{
-          display: "flex",
-          listStyle: "none",
-          gap: "25px",
-        }}
-      >
-        <li>Home</li>
-        <li>Jobs</li>
-        <li>Internships</li>
-        <li>Hackathons</li>
-        <li>Events</li>
-      </ul>
+        {/* Logo */}
 
-      <div>
-        <button
-          style={{
-            marginRight: "10px",
-            padding: "8px 18px",
-          }}
-        >
-          Login
-        </button>
+        <h1 className="text-3xl font-bold text-blue-600 cursor-pointer">
+          DreamHire
+        </h1>
 
-        <button
-          style={{
-            padding: "8px 18px",
-            background: "#2563eb",
-            color: "white",
-            border: "none",
-          }}
-        >
-          Register
-        </button>
+        {/* Menu */}
+
+        <div className="hidden md:flex items-center gap-8">
+
+          <NavLink to="/">Home</NavLink>
+
+          <NavLink to="/jobs">Jobs</NavLink>
+
+          <NavLink to="/internships">Internships</NavLink>
+
+          <NavLink to="/hackathons">Hackathons</NavLink>
+
+          <NavLink to="/events">Events</NavLink>
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="flex gap-3">
+
+          <NavLink
+            to="/login"
+            className="px-5 py-2 border rounded-lg hover:bg-gray-100"
+          >
+            Login
+          </NavLink>
+
+          <NavLink
+            to="/register"
+            className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            Register
+          </NavLink>
+
+        </div>
+
       </div>
     </nav>
   );

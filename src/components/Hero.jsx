@@ -1,55 +1,43 @@
 function Hero() {
   return (
-    <section
-      style={{
-        textAlign: "center",
-        padding: "80px 20px",
-        background: "#f8fafc",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "48px",
-          marginBottom: "20px",
-        }}
-      >
-        Find Your Dream Opportunity
-      </h1>
+    <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
 
-      <p
-        style={{
-          fontSize: "20px",
-          color: "gray",
-        }}
-      >
-        Jobs • Internships • Hackathons • Events
-      </p>
+      <div className="max-w-7xl mx-auto px-6 py-28">
 
-      <div
-        style={{
-          marginTop: "35px",
-        }}
-      >
-        <input
-          placeholder="Search jobs..."
-          style={{
-            width: "400px",
-            padding: "14px",
-          }}
-        />
+        <h1 className="text-6xl font-bold leading-tight">
 
-        <button
-          style={{
-            marginLeft: "10px",
-            padding: "14px 25px",
-            background: "#2563eb",
-            color: "white",
-            border: "none",
-          }}
-        >
-          Search
-        </button>
+          Discover Your
+          <br />
+          Dream Career
+
+        </h1>
+
+        <p className="mt-6 text-xl text-gray-200 max-w-2xl">
+
+          Find Jobs, Internships,
+          Hackathons and Events
+          from top companies.
+
+        </p>
+
+        {/* Search */}
+
+        <div className="mt-10 flex">
+
+          <input
+            type="text"
+            placeholder="Search Jobs..."
+            className="bg-white text-black w-full md:w-96 px-5 py-4 rounded-l-xl outline-none"
+          />
+
+          <button className="bg-yellow-400 text-black px-8 rounded-r-xl font-semibold hover:bg-yellow-300">
+            Search
+          </button>
+
+        </div>
+
       </div>
+
     </section>
   );
 }
